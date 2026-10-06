@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Scale - a Photoshop plugin by Fe</title>
+  <meta name="description" content="Smart Scale is a free Photoshop plugin that scales layers, effects, shape corners, and strokes together, by percentage." />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <style>
+    :root {
+      --bg: #101216;
+      --card: #171a20;
+      --line: #2a2f38;
+      --text: #e8eaee;
+      --muted: #9aa1ad;
+      --accent: #3dffe8;
+      --accent-ink: #04342c;
+      --warn-bg: #1d2a2b;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7f9;
+        --card: #ffffff;
+        --line: #dde1e7;
+        --text: #15181d;
+        --muted: #5a6270;
+        --accent: #0f6e56;
+        --accent-ink: #ffffff;
+        --warn-bg: #e6f4f0;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 32px; }
+    header { display: flex; gap: 18px; align-items: center; margin-bottom: 20px; }
+    header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0; font-weight: 600; }
+    .by { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    .lead { font-size: 20px; line-height: 1.45; margin: 0 0 12px; }
+    h2 { font-size: 20px; margin: 36px 0 10px; font-weight: 600; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 22px; }
+    li { margin: 0 0 6px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .note {
+      background: var(--warn-bg);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 0 0 12px;
+    }
+    .note p { margin: 0; }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8px 20px 48px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      .lead { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icon.png" alt="Smart Scale plugin icon" width="72" height="72" />
+      <div>
+        <h1>Smart Scale</h1>
+        <p class="by">A free Photoshop plugin by Fe. Requires Photoshop 26.11 or later.</p>
+      </div>
+    </header>
+
+    <p class="lead">Scale layers, effects, corners, and strokes together, by percentage.</p>
+    <p>Smart Scale resizes your selected layers by the percentage you enter and keeps everything attached to them in proportion, so a resized button still looks like the same button.</p>
+
+    <!-- Add the Adobe Marketplace link here once the listing is approved. -->
+
+    <h2>What it scales</h2>
+    <ul>
+      <li>Layer size, from the center</li>
+      <li>Layer effects such as shadows, glows, strokes, and bevels</li>
+      <li>Rounded-rectangle corner radii, each corner on its own. Square corners stay square</li>
+      <li>Shape stroke widths, with dashes and gaps following along</li>
+    </ul>
+
+    <h2>How to use it</h2>
+    <ul>
+      <li>Select one or more layers or groups</li>
+      <li>Enter a percentage, for example 75, and choose Scale Selected</li>
+      <li>Use Advanced Settings to turn Resize Layers, Scale Effects, or Include Nested on or off</li>
+    </ul>
+
+    <h2>Good to know</h2>
+    <div class="note">
+      <p><strong>Reset Scaling is not an undo.</strong> It reverses your last scale by applying the opposite percentage. On pixel layers, scaling down and back up softens detail. For an exact rollback, use Photoshop's Undo.</p>
+    </div>
+    <ul>
+      <li>Reset only covers your most recent scale, in the same document</li>
+      <li>If you already undid a scale with Photoshop's Undo, don't press Reset afterward</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>Smart Scale makes no network requests and collects no data. It remembers only your three toggle settings, on your own computer. The Find Me links in the panel open my profiles in your browser, and only after you click and confirm.</p>
+
+    <h2>Support and contact</h2>
+    <div class="card">
+      <p>Questions, bug reports, or ideas? Email <a href="mailto:seymasean17@gmail.com">seymasean17@gmail.com</a>. Please include your Photoshop version and what you were scaling.</p>
+      <p style="margin:0">Find my other work on <a href="https://www.behance.net/seymasean17">Behance</a> and <a href="https://www.tiktok.com/@seymasean17">TikTok</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    Smart Scale 1.0.0 &middot; By Fe &middot; Not affiliated with or endorsed by Adobe. Adobe and Photoshop are trademarks of Adobe.
+  </footer>
+</body>
+</html>
